@@ -1,6 +1,5 @@
+function play() { 
 
-
-// Global variables
 // Messages
   win = 'You Win!';
   loss = 'You Lose...';
@@ -8,12 +7,12 @@
   again = 'Try Again.';
   replay = ' Play Again?';
 
-  // Counts 
+// Counts 
   let playerWins = 0; 
   let computerWins = 0; 
   let tieGames = 0;
-  //tracks score over rounds **upgrade to looping function later
-
+  
+//tracks score over rounds **upgrade to looping function later
   let getScore = (playerWins, computerWins) => {  // add replay function later
   if (playerWins > computerWins) {
     return alert('You\'ve Won!');
@@ -89,6 +88,8 @@ playGame(playerWins,computerWins);
   console.log(playerWins,computerWins,tieGames);
 getScore(playerWins,computerWins);
 
+
+}
 
 
 
