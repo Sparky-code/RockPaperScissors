@@ -18,8 +18,8 @@
     document.getElementById('ties').innerHTML += ` ${tieGames}`
 }
   
-//tracks score over rounds **upgrade to looping function later
-  let getScore = (playerWins, computerWins) => {  // add replay function later
+// Tracks Score + Declares Winner
+  let getScore = (playerWins, computerWins) => {
   if ((playerWins === 5) && (computerWins <= 5)) {
     return document.getElementById('result').innerHTML = ('You\'ve Won!');
   } else if ((computerWins === 5) && (playerWins <= 5)) {
@@ -28,7 +28,8 @@
     return document.getElementById('result').innerHTML = ('Tie Game.')
   }
 }
-// Clear
+
+// Clear Game
   function clear() {    
   document.getElementById('result').innerHTML = '';
   document.getElementById('wins').innerHTML = '';
@@ -37,8 +38,8 @@
   document.getElementById('error').innerHTML = '';
   }
 
+// Play Game  
 function play() {
-  
 
 let playGame = (playRound) => {
 
@@ -46,20 +47,15 @@ let playGame = (playRound) => {
    rpsArray = ["MOUNTAIN", "FOREST", "MACHINE"];
    computerPlay = rpsArray[Math.floor(Math.random() * rpsArray.length)];
 
-// User inputs a value (MOUNTAIN, FOREST, or MACHINE) + case insensitive
+// User selects a value (MOUNTAIN, FOREST, or MACHINE)
   playSel = document.getElementById('Mountain', 'Forest', 'Machine').getAttribute('value')
-  console.log(playSel) 
 
 // Computer play
   compSel = computerPlay; 
-  console.log(compSel);
-
-
 
 // Play A Round of Game  
   playRound; 
     if (playSel === compSel) {
-      console.log(tie + replay);
       document.getElementById('result').innerHTML += `${playSel} vs ${compSel} - ${tie}`; 
       ++tieGames;
 
@@ -68,22 +64,20 @@ let playGame = (playRound) => {
             (playSel === 'FOREST' && compSel === 'MACHINE') || 
             (playSel === 'MACHINE' && compSel === 'MOUNTAIN')) {
 
-            //track playRound output - LOSS
-              console.log(loss + replay); 
+  // Track playRound results - LOSS
               document.getElementById('result').innerHTML += `${compSel} beats ${playSel} - ${loss}`;
               ++computerWins;
               
-  // informs player of a win
+  // Informs player of result
     } else if ((playSel === 'MOUNTAIN' && compSel === 'MACHINE') ||
             (playSel === 'FOREST' && compSel === 'MOUNTAIN') ||
             (playSel === 'MACHINE' && compSel === 'FOREST')) {
 
-            // track playRound output - WIN
-              console.log(win + replay); 
+  // Track playRound output - WIN
               document.getElementById('result').innerHTML += `${playSel} beats ${compSel} - ${win}`;
               ++playerWins;
   
-  // informs player they made a spelling mistake or unaccepted play            
+  // Selection Error (from v1)            
     } else if ((playSel !== 'MOUNTAIN') ||
             (playSel !== 'FOREST') || 
             (playSel !== 'MACHINE')) {
@@ -96,7 +90,7 @@ getScore(playerWins, computerWins)
 playGame(playerWins,computerWins, clear(result, wins, losses, ties, error));
 }
 
-// Reset
+// Reset Game
   function reset() {
     playerWins = 0;
     computerWins = 0;

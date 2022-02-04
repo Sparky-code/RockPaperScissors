@@ -1,8 +1,6 @@
 /* Style Sheet */
 /* @Sparky-code on GitHub */
 
-/* Global */
-
 * {
     margin: 0;
     padding: 0;
@@ -130,7 +128,9 @@ input {
     font-size: 3vh;
 }
 
-.signature {  /* github & dev.to links */
+/* github & dev.to links */
+
+.signature { 
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
