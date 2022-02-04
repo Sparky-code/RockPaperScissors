@@ -1,0 +1,138 @@
+/* Style Sheet */
+/* @Sparky-code on GitHub */
+
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+p {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    margin: 0px;
+    color: white;
+    font-family: Permanent Marker;
+}
+
+p.play {
+    margin-bottom: 1.2em;
+}
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* no underline */
+}
+
+body {
+    margin: 0;
+    background-image:url(img/MountainImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  width: inherit;
+  background: #000000;
+  background: linear-gradient(25deg, #000000 12%, #6c6c6cab 48%, #f1f1f12d 100%);
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: inherit;
+    min-width: 100%;
+    max-height: 80px;
+    background-color: #222222;
+    font-size: 3vw;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    min-height: 50vh;
+    font-size: 40px;
+    padding-top: 10vh;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-count: 2;
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    font-size: 1em;
+    background: #272727;
+}
+
+/* Plays */
+
+input {  
+    width: 250px;
+    height: 150px;
+    font-size: 20px;
+}
+
+.card {
+    margin: 10px;
+    width: 180px;
+    height: 150px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f5f5f535;
+    font-size: 25px;
+    
+}
+
+.reset {    
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    border: 5px solid #ffffff;
+    background-color: #f5f5f535;
+    font-size: 20px;
+    font-family: Permanent Marker;
+    color: white;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    top: 0;
+    font-size: 3vh;
+}
+
+.signature {  /* github & dev.to links */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    font-family: Arial, Helvetica, sans-serif
+}
