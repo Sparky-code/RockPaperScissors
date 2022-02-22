@@ -31,26 +31,22 @@
           </div>
         </div>
 
+  <!--Round Outcome-->
+      <div class="outcome">
+        <p id="result"></p>
+      </div>
+
   <!--Game Module-->
         <div class="main">
           <div class="gamePlay">
-            <div>
-              <p class="play"></p>
-            </div>
-              <div>
-                <p id="result"></p>
-              </div>
-                <input type="button" class="reset" onclick="reset()" value="Reset">
               <div id="cards">
                 <input type="image" onclick="play()" class='card' id='Mountain' alt="Mountain" src="img/Mountains.png" value="MOUNTAIN">
                 <input type="image" onclick="play()" class='card' id="Forest" alt="Forest" src="img/Forest.png" value="FOREST">
                 <input type="image" onclick="play()" class='card' id="Machine" alt="Machine" src="img/Machine.png" value="MACHINE">
               </div>
-            <div>
-              <p>Mountain? Forest? or Machine?</p>
-            </div>
               <div>
               <p id="error"></p>
+              <input type="button" class="reset" onclick="reset()" value="Reset">
           </div>
         </div>
       </div>

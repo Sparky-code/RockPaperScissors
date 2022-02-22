@@ -17,6 +17,7 @@ body {
     background-size: cover;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -28,8 +29,8 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     background: #000000;
-    background: linear-gradient(25deg, #000000 12%, #6c6c6cab 48%, #f1f1f12d 100%);
-    font-family: Arial, Helvetica, sans-serif
+    background: linear-gradient(25deg, #000000 12%, #6c6c6cab 38%, #f1f1f12d 90%);
+    font-family: Permanent Marker;
   }
 
   .header {
@@ -42,7 +43,7 @@ body {
     min-height: 25px;
     min-width: 100vw;
     background-color: #222222;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
 }
 
 .score {
@@ -61,13 +62,60 @@ body {
     justify-content: center;
     align-content: center;
     position: relative;
-    min-width: 100%;
+    min-width: 100vh;
     height: 100%;
     font-size: 40px;
 }
-.gamePlay {
-    height: 90vh;
+
+/* Plays */
+
+.gamePlay, .outcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
+.outcome {
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.card {
+    margin: 10px;
+    width: 10rem;
+    height: 8rem;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f5f5f535;
+    font-size: 25px;
+    
+}
+
+.reset {    
+    width: 10rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    background-color: #f5f5f535;
+    font-size: 20px;
+    color: white;
+}
+
+p.result {
+    font-size: 1.5rem;
+}
+
+/* Credits */
 
 .footer {
     display: flex;
@@ -76,10 +124,10 @@ body {
     column-count: 2;
     position: absolute;
     bottom: 0;
-    width: 100vw;
-    height: 75px;
+    min-width: 100vw;
+    height: 5.5rem;
     font-size: 1em;
-    background: #27272770;
+    background: #27272799;
 }
 
 p {
@@ -89,45 +137,11 @@ p {
     bottom: 0;
     margin: 0px;
     color: white;
-    font-family: Permanent Marker;
 }
 
-p.play {
-    min-height: 50px;
-}
 a {
     color: rgb(255, 255, 255);
     text-decoration: none; /* no underline */
-}
-
-/* Plays */
-
-input {  
-    width: 250px;
-    height: 150px;
-    font-size: 20px;
-}
-
-.card {
-    margin: 10px;
-    width: 180px;
-    height: 150px;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #f5f5f535;
-    font-size: 25px;
-    
-}
-
-.reset {    
-    width: 200px;
-    height: 50px;
-    border-radius: 5px;
-    border: 5px solid #ffffff;
-    background-color: #f5f5f535;
-    font-size: 20px;
-    font-family: Permanent Marker;
-    color: white;
 }
 
 /* github & dev.to links */
@@ -136,5 +150,5 @@ input {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
